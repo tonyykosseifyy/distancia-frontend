@@ -1,6 +1,22 @@
-import React from 'react'
+export const config = { unstable_runtimeJS: false };
+import React, { useEffect } from 'react'
+{/* <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+
+	<!-- Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"></link> */}
+
+import '../../assets/vendor/font-awesome/css/all.css'
+import '../../assets/vendor/bootstrap-icons/bootstrap-icons.css'
+
+import '../../assets/vendor/tiny-slider/tiny-slider.css';
+import '../../assets/vendor/glightbox/css/glightbox.css'
+import '../../assets/css/style.css';
 
 const Navbar = () : React.ReactNode => {
+
   return (
 		<header className="navbar-light navbar-sticky header-static">
   		{/* Nav START */}
@@ -10,12 +26,12 @@ const Navbar = () : React.ReactNode => {
 					<a className="navbar-brand" href="index.html">
 						<img
 							className="light-mode-item navbar-brand-item"
-							src="assets/images/logo.svg"
+							src="images/logo.svg"
 							alt="logo"
 						/>
 						<img
 							className="dark-mode-item navbar-brand-item"
-							src="assets/images/logo-light.svg"
+							src="images/logo-light.svg"
 							alt="logo"
 						/>
 					</a>
@@ -241,7 +257,7 @@ const Navbar = () : React.ReactNode => {
 													{/* Dropdown item */}
 													<div className="d-flex mb-4 position-relative">
 														<img
-															src="assets/images/client/uni-logo-01.svg"
+															src="images/client/uni-logo-01.svg"
 															className="icon-md"
 															alt=""
 														/>
@@ -257,7 +273,7 @@ const Navbar = () : React.ReactNode => {
 													{/* Dropdown item */}
 													<div className="d-flex mb-4 position-relative">
 														<img
-															src="assets/images/client/uni-logo-02.svg"
+															src="images/client/uni-logo-02.svg"
 															className="icon-md"
 															alt=""
 														/>
@@ -273,7 +289,7 @@ const Navbar = () : React.ReactNode => {
 													{/* Dropdown item */}
 													<div className="d-flex mb-4 position-relative">
 														<img
-															src="assets/images/client/uni-logo-03.svg"
+															src="images/client/uni-logo-03.svg"
 															className="icon-md"
 															alt=""
 														/>
@@ -287,7 +303,7 @@ const Navbar = () : React.ReactNode => {
 													{/* Dropdown item */}
 													<div className="d-flex mb-4 position-relative">
 														<img
-															src="assets/images/client/uni-logo-01.svg"
+															src="images/client/uni-logo-01.svg"
 															className="icon-md"
 															alt=""
 														/>
@@ -303,7 +319,7 @@ const Navbar = () : React.ReactNode => {
 													{/* Dropdown item */}
 													<div className="d-flex position-relative">
 														<img
-															src="assets/images/client/uni-logo-04.svg"
+															src="images/client/uni-logo-04.svg"
 															className="icon-md"
 															alt=""
 														/>
@@ -378,7 +394,7 @@ const Navbar = () : React.ReactNode => {
 														className="card bg-blue rounded-0 rounded-bottom p-3 position-relative overflow-hidden"
 														style={{
 															background:
-																"url(assets/images/pattern/05.png) no-repeat center center",
+																"url(images/pattern/05.png) no-repeat center center",
 															backgroundSize: "cover"
 														}}
 													>
@@ -1444,7 +1460,7 @@ const Navbar = () : React.ReactNode => {
 											<h6 className="mb-0">Download Eduport</h6>
 											<hr />
 											{/* Image */}
-											<img src="assets/images/element/14.svg" alt="" />
+											<img src="images/element/14.svg" alt="" />
 											{/* Download button */}
 											<div className="row g-2 justify-content-center mt-3">
 												{/* Google play store button */}
@@ -1452,7 +1468,7 @@ const Navbar = () : React.ReactNode => {
 													<a href="#">
 														{" "}
 														<img
-															src="assets/images/client/google-play.svg"
+															src="images/client/google-play.svg"
 															className="btn-transition"
 															alt="google-store"
 														/>{" "}
@@ -1463,7 +1479,7 @@ const Navbar = () : React.ReactNode => {
 													<a href="#">
 														{" "}
 														<img
-															src="assets/images/client/app-store.svg"
+															src="images/client/app-store.svg"
 															className="btn-transition"
 															alt="app-store"
 														/>{" "}
@@ -1481,7 +1497,7 @@ const Navbar = () : React.ReactNode => {
 												<div className="avatar avatar-xs me-2">
 													<img
 														className="avatar-img rounded-circle"
-														src="assets/images/avatar/09.jpg"
+														src="images/avatar/09.jpg"
 														alt="avatar"
 													/>
 												</div>
@@ -1616,7 +1632,7 @@ const Navbar = () : React.ReactNode => {
 						>
 							<img
 								className="avatar-img rounded-circle"
-								src="assets/images/avatar/01.jpg"
+								src="images/avatar/01.jpg"
 								alt="avatar"
 							/>
 						</a>
@@ -1631,7 +1647,7 @@ const Navbar = () : React.ReactNode => {
 									<div className="avatar me-3">
 										<img
 											className="avatar-img rounded-circle shadow"
-											src="assets/images/avatar/01.jpg"
+											src="images/avatar/01.jpg"
 											alt="avatar"
 										/>
 									</div>
