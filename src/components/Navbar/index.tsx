@@ -1,18 +1,10 @@
 export const config = { unstable_runtimeJS: false };
-import React, { useEffect } from 'react'
-{/* <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+import React from 'react'
 
-	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css"></link> */}
-
-import '../../assets/vendor/font-awesome/css/all.css'
-import '../../assets/vendor/bootstrap-icons/bootstrap-icons.css'
-
+import '../../assets/vendor/font-awesome/css/all.css';
+import '../../assets/vendor/bootstrap-icons/bootstrap-icons.css';
 import '../../assets/vendor/tiny-slider/tiny-slider.css';
-import '../../assets/vendor/glightbox/css/glightbox.css'
+import '../../assets/vendor/glightbox/css/glightbox.css';
 import '../../assets/css/style.css';
 
 const Navbar = () : React.ReactNode => {

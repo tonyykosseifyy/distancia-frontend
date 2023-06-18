@@ -1,3 +1,4 @@
+export const config = { unstable_runtimeJS: false }
 // import './globals.css'
 // import '../assets/scss/style.scss';
 // import '../assets/vendor/bootstrap/scss/bootstrap.scss';
@@ -22,11 +23,11 @@
 // import '../assets/vendor/stepper/css/bs-stepper.css';
 // import '../assets/vendor/tiny-slider/tiny-slider.css';
 
-
-
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import Script from 'next/script';
+import BackToTop from '@/components/BackToTop';
 
 export const metadata = {
   title: 'Distancia',
@@ -55,7 +56,16 @@ export default function RootLayout({
       
       <body>
         <Navbar />
-        {/* {children} */}
+        {children}
+        <Footer />
+        <BackToTop />
+        
+        <Script strategy='lazyOnload' src="src/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
+        <Script strategy='lazyOnload' src="src/assets/vendor/tiny-slider/tiny-slider.js" />
+        <Script strategy='lazyOnload' src="src/assets/vendor/glightbox/js/glightbox.js" />
+        <Script strategy='lazyOnload' src="src/assets/vendor/purecounterjs/dist/purecounter_vanilla.js" />
+        <Script strategy='lazyOnload' src="src/assets/js/functions.js" />
+
       </body>
     </html>
 )};

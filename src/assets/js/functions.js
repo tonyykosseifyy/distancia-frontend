@@ -38,6 +38,8 @@ Table Of Content
 ====================== */
 
 "use strict";
+alert('wokring')
+
 !function () {
 
     window.Element.prototype.removeClass = function () {
