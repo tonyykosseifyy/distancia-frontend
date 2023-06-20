@@ -33,6 +33,7 @@ export default function RootLayout({
         <Script strategy='lazyOnload' src="/assets/vendor/glightbox/js/glightbox.js" />
         <Script strategy='lazyOnload' src="/assets/vendor/purecounterjs/dist/purecounter_vanilla.js" />
         <Script strategy='lazyOnload' src="/assets/js/functions.js" />
+        <Script strategy='lazyOnload' src="/assets/vendor/custom/theme.js" />
 
       </body>
     </html>
