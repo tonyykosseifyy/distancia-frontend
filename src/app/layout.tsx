@@ -1,4 +1,4 @@
-export const config = { unstable_runtimeJS: false }
+// export const config = { unstable_runtimeJS: false }
 // import './globals.css'
 // import '../assets/scss/style.scss';
 // import '../assets/vendor/bootstrap/scss/bootstrap.scss';

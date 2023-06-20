@@ -1,4 +1,4 @@
-export const config = { unstable_runtimeJS: false };
+// export const config = { unstable_runtimeJS: false };
 import React from 'react'
 
 import '../../assets/vendor/font-awesome/css/all.css';
