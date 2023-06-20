@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Head from 'next/head';
+import Script from 'next/script';
 
 export const metadata = {
   title: 'Distancia',
@@ -27,6 +28,9 @@ export default function RootLayout({
       
       <body>
         {children}
+        
+        <Script src="/assets/vendor/custom/theme.js" />
       </body>
+      
     </html>
 )};
