@@ -28,7 +28,7 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         
-        <Script strategy='lazyOnload' src="/assets/vendor/glightbox/js/glightbox.js" />
+        <Script strategy='afterInteractive' src="/assets/vendor/glightbox/js/glightbox.js" />
         <Script strategy='lazyOnload' src="/assets/vendor/custom/theme.js" />
         <Script strategy='lazyOnload' src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
         <Script strategy='lazyOnload' src="/assets/vendor/tiny-slider/tiny-slider.js" />
