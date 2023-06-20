@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import '../../public/assets/vendor/font-awesome/css/all.css';
 import '../../public/assets/vendor/bootstrap-icons/bootstrap-icons.css';
 import '../../public/assets/vendor/tiny-slider/tiny-slider.css';
@@ -7,7 +8,7 @@ import '../../public/assets/css/style.css';
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import 'bootstrap/dist/css/bootstrap.css';
+
 import Script from 'next/script';
 import BackToTop from '@/components/BackToTop';
 import Head from 'next/head';
