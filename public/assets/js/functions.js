@@ -37,7 +37,7 @@ Table Of Content
 26 FLATPICKER
 ====================== */
 
-"use strict";
+// "use strict";
 // alert('wokring')
 
 !function () {
