@@ -1,17 +1,10 @@
-// export const config = { unstable_runtimeJS: false };
-import React from 'react'
+import Head from 'next/head';
 
-import '../../assets/vendor/font-awesome/css/all.css';
-import '../../assets/vendor/bootstrap-icons/bootstrap-icons.css';
-import '../../assets/vendor/tiny-slider/tiny-slider.css';
-import '../../assets/vendor/glightbox/css/glightbox.css';
-import '../../assets/css/style.css';
 
 const Navbar = () : React.ReactNode => {
-
   return (
 		<header className="navbar-light navbar-sticky header-static">
-  		{/* Nav START */}
+			{/* Nav START */}
 			<nav className="navbar navbar-expand-xl">
 				<div className="container-fluid px-3 px-xl-5">
 					{/* Logo START */}

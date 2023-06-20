@@ -1,12 +1,5 @@
-// export const config = { unstable_runtimeJS: false };
 import React from 'react'
-import '../../assets/vendor/font-awesome/css/all.css';
-import '../../assets/vendor/bootstrap-icons/bootstrap-icons.css';
-import '../../assets/vendor/tiny-slider/tiny-slider.css';
-import '../../assets/vendor/glightbox/css/glightbox.css';
-import '../../assets/css/style.css';
-
-// Same styles as Navbar 
+import Head from 'next/head';
 
 
 const Footer = () : React.ReactNode => {
@@ -279,7 +272,7 @@ const Footer = () : React.ReactNode => {
 					</div>
 					</div>
 			</div>
-		</footer>
+	</footer>
   );
 };
 

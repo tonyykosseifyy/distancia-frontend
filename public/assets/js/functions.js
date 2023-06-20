@@ -38,7 +38,7 @@ Table Of Content
 ====================== */
 
 "use strict";
-alert('wokring')
+// alert('wokring')
 
 !function () {
 
