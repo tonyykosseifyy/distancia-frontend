@@ -869,7 +869,7 @@ Award and Team END */}
 
 			<Script src="/assets/vendor/aos/aos.js" />
     </div>
-  )
-}
+  );
+};
 
 export default About
