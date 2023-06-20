@@ -28,12 +28,12 @@ export default function RootLayout({
         <Footer />
         <BackToTop />
         
-        <Script strategy='afterInteractive' src="/assets/vendor/glightbox/js/glightbox.js" />
-        <Script strategy='lazyOnload' src="/assets/vendor/custom/theme.js" />
-        <Script strategy='lazyOnload' src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
-        <Script strategy='lazyOnload' src="/assets/vendor/tiny-slider/tiny-slider.js" />
-        <Script strategy='lazyOnload' src="/assets/vendor/purecounterjs/dist/purecounter_vanilla.js" />
-        <Script strategy='lazyOnload' src="/assets/js/functions.js" />
+        <Script src="/assets/vendor/glightbox/js/glightbox.js" />
+        <Script src="/assets/vendor/custom/theme.js" />
+        <Script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
+        <Script src="/assets/vendor/tiny-slider/tiny-slider.js" />
+        <Script src="/assets/vendor/purecounterjs/dist/purecounter_vanilla.js" />
+        <Script src="/assets/js/functions.js" />
        
       </body>
     </html>
