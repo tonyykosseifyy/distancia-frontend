@@ -30,6 +30,8 @@ export default function RootLayout({
         {children}
         
         <Script src="/assets/vendor/custom/theme.js" />
+        <Script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
+        <Script src="/assets/js/functions.js" />
       </body>
       
     </html>
