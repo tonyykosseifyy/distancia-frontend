@@ -14,12 +14,12 @@ const Footer = () : React.ReactNode => {
 							<a className="me-0" href="index.html">
 							<img
 									className="light-mode-item h-40px"
-									src="images/logo.svg"
+									src="/images/logo.svg"
 									alt="logo"
 							/>
 							<img
 									className="dark-mode-item h-40px"
-									src="images/logo-light.svg"
+									src="/images/logo-light.svg"
 									alt="logo"
 							/>
 							</a>
@@ -168,7 +168,7 @@ const Footer = () : React.ReactNode => {
 							<div className="col-6 col-sm-4 col-md-3 col-lg-6">
 									<a href="#">
 									{" "}
-									<img src="images/client/google-play.svg" alt="" />{" "}
+									<img src="/images/client/google-play.svg" alt="" />{" "}
 									</a>
 							</div>
 							{/* App store button */}
@@ -176,7 +176,7 @@ const Footer = () : React.ReactNode => {
 									<a href="#">
 									{" "}
 									<img
-											src="images/client/app-store.svg"
+											src="/images/client/app-store.svg"
 											alt="app-store"
 									/>{" "}
 									</a>
@@ -227,7 +227,7 @@ const Footer = () : React.ReactNode => {
 													<a className="dropdown-item me-4" href="#">
 															<img
 															className="fa-fw me-2"
-															src="images/flags/uk.svg"
+															src="/images/flags/uk.svg"
 															alt=""
 															/>
 															English
@@ -237,7 +237,7 @@ const Footer = () : React.ReactNode => {
 													<a className="dropdown-item me-4" href="#">
 															<img
 															className="fa-fw me-2"
-															src="images/flags/gr.svg"
+															src="/images/flags/gr.svg"
 															alt=""
 															/>
 															German{" "}
@@ -247,7 +247,7 @@ const Footer = () : React.ReactNode => {
 													<a className="dropdown-item me-4" href="#">
 															<img
 															className="fa-fw me-2"
-															src="images/flags/sp.svg"
+															src="/images/flags/sp.svg"
 															alt=""
 															/>
 															French
