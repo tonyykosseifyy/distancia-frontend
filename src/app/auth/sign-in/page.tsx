@@ -1,4 +1,5 @@
 import React from 'react'
+import SignInForm from '@/components/Auth/SignIn';
 
 const SignIn = () : React.ReactNode => {
   return (
@@ -69,71 +70,7 @@ const SignIn = () : React.ReactNode => {
 										Nice to see you! Please log in with your account.
 									</p>
 									{/* Form START */}
-									<form>
-										{/* Email */}
-										<div className="mb-4">
-											<label htmlFor="exampleInputEmail1" className="form-label">
-												Email address *
-											</label>
-											<div className="input-group input-group-lg">
-												<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
-													<i className="bi bi-envelope-fill" />
-												</span>
-												<input
-													type="email"
-													className="form-control border-0 bg-light rounded-end ps-1"
-													placeholder="E-mail"
-													id="exampleInputEmail1"
-												/>
-											</div>
-										</div>
-										{/* Password */}
-										<div className="mb-4">
-											<label htmlFor="inputPassword5" className="form-label">
-												Password *
-											</label>
-											<div className="input-group input-group-lg">
-												<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
-													<i className="fas fa-lock" />
-												</span>
-												<input
-													type="password"
-													className="form-control border-0 bg-light rounded-end ps-1"
-													placeholder="password"
-													id="inputPassword5"
-												/>
-											</div>
-											<div id="passwordHelpBlock" className="form-text">
-												Your password must be 8 characters at least
-											</div>
-										</div>
-										{/* Check box */}
-										<div className="mb-4 d-flex justify-content-between mb-4">
-											<div className="form-check">
-												<input
-													type="checkbox"
-													className="form-check-input"
-													id="exampleCheck1"
-												/>
-												<label className="form-check-label" htmlFor="exampleCheck1">
-													Remember me
-												</label>
-											</div>
-											<div className="text-primary-hover">
-												<a href="forgot-password.html" className="text-secondary">
-													<u>Forgot password?</u>
-												</a>
-											</div>
-										</div>
-										{/* Button */}
-										<div className="align-items-center mt-0">
-											<div className="d-grid">
-												<button className="btn btn-primary mb-0" type="button">
-													Login
-												</button>
-											</div>
-										</div>
-									</form>
+									<SignInForm />
 									{/* Form END */}
 									{/* Social buttons and divider */}
 									<div className="row">

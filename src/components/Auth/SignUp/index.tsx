@@ -26,7 +26,6 @@ const SignUp = (): React.ReactNode => {
 						<i className="bi bi-person-fill"></i>
 					</span>
 					<input
-						type="email"
 						className="form-control border-0 bg-light rounded-end ps-1"
 						placeholder="First Name"
 						id="exampleInputEmail1.1"
@@ -45,7 +44,6 @@ const SignUp = (): React.ReactNode => {
 						<i className="bi bi-person-fill"></i>
 					</span>
 					<input
-						type="email"
 						className="form-control border-0 bg-light rounded-end ps-1"
 						placeholder="Last Name"
 						id="exampleInputEmail1.2"
