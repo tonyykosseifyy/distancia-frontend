@@ -8,8 +8,8 @@ const customFetch = (url: string, options: any) => {
     headers: {
       ...options.headers,
       'Content-Type': 'application/json',
+      Authorization: `Bearer ${cookies().get('token')}`,
     },
-    Authorization: `Bearer ${cookies().get('token')}`,
   })
 };
 
