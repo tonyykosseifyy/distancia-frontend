@@ -19,7 +19,7 @@ const SignUp = () : React.ReactNode => {
 									</p>
 								</div>
 								{/* SVG Image */}
-								<img src="/images/element/02.svg" style={{ objectFit: 'contain', maxHeight:'40vh' }} className="mt-5" alt="" />
+								<img src="/images/element/02.svg" style={{ objectFit: 'contain', maxHeight:'45vh' }} className="mt-5" alt="" />
 								{/* Info */}
 								<div className="d-sm-flex mt-5 align-items-center justify-content-center">
 									<ul className="avatar-group mb-2 mb-sm-0">

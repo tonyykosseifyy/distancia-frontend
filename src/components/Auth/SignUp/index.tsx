@@ -9,6 +9,7 @@ const SignUp = (): React.ReactNode => {
     resolver: yupResolver(schema),
   });
 	const [ see, setSee ] = useState<Boolean>(false);
+	const [ check , setCheck ] = useState(false);
   const onSubmit = (data: any) => {
     // Handle form submission
     console.log(data);
@@ -141,6 +142,8 @@ const SignUp = (): React.ReactNode => {
 						type="checkbox"
 						className="form-check-input"
 						id="checkbox-1"
+						checked={check}
+						onChange={() => setCheck(state => !state)}
 					/>
 					<label className="form-check-label" htmlFor="checkbox-1">
 						By signing up, you agree to the
@@ -151,7 +154,7 @@ const SignUp = (): React.ReactNode => {
 			{/* Button */}
 			<div className="align-items-center mt-0">
 				<div className="d-grid">
-					<button onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="submit">
+					<button disabled={!check} onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="submit">
 						Sign Up
 					</button>
 				</div>
