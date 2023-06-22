@@ -64,7 +64,7 @@ const SignIn = () : React.ReactNode => {
 								<div className="col-sm-10 col-xl-8 m-auto">
 									{/* Title */}
 									<span className="mb-0 fs-1">👋</span>
-									<h1 className="fs-2">Login into Eduport!</h1>
+									<h1 className="fs-2">Login into Distancia!</h1>
 									<p className="lead mb-4">
 										Nice to see you! Please log in with your account.
 									</p>
