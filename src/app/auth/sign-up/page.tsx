@@ -7,10 +7,10 @@ const SignUp = () : React.ReactNode => {
 		<main>
 			<section className="p-0 d-flex align-items-center position-relative overflow-hidden">
 				<div className="container-fluid">
-					<div className="row">
+					<div className="row flex-column">
 						{/* left */}
-						<div className="col-12 col-lg-6 d-md-flex align-items-center justify-content-center bg-primary bg-opacity-10 vh-lg-100">
-							<div className="p-3 p-lg-5">
+						<div style={{ minHeight: '100vh' }} className="pt-4 col d-md-flex justify-content-center align-items-stretch bg-primary bg-opacity-10 vh-100">
+							<div style={{ maxHeight: '100vh',minHeight: 'calc(100vh - 40px)' }} className="h-100 p-3 p-lg-2 d-flex flex-column align-items-center justify-content-between">
 								{/* Title */}
 								<div className="text-center">
 									<h2 className="fw-bold">Welcome to our largest community</h2>
@@ -19,7 +19,7 @@ const SignUp = () : React.ReactNode => {
 									</p>
 								</div>
 								{/* SVG Image */}
-								<img src="/images/element/02.svg" className="mt-5" alt="" />
+								<img src="/images/element/02.svg" style={{ objectFit: 'contain', maxHeight:'40vh' }} className="mt-5" alt="" />
 								{/* Info */}
 								<div className="d-sm-flex mt-5 align-items-center justify-content-center">
 									<ul className="avatar-group mb-2 mb-sm-0">
@@ -60,7 +60,7 @@ const SignUp = () : React.ReactNode => {
 							</div>
 						</div>
 						{/* Right */}
-						<div className="col-12 col-lg-6 m-auto">
+						<div className="col m-auto">
 							<div className="row my-5">
 								<div className="col-sm-10 col-xl-8 m-auto">
 									{/* Title */}
