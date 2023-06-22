@@ -27,6 +27,5 @@ export default function RootLayout({
         </section>   
         <Script src="/assets/vendor/choices/js/choices.min.js" /> 
         <Script src="/assets/vendor/aos/aos.js" />
-
     </main>        
 )};
