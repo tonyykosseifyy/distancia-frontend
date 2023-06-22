@@ -1,15 +1,82 @@
 'use client';
 import React, { useState } from 'react'
-
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { SignUpFormData, schema } from './utils';
 
 const SignUp = (): React.ReactNode => {
-	const [ state, setState ] = useState<Boolean>(false);
+	const { register, handleSubmit, formState: { errors } } = useForm<SignUpFormData>({
+    resolver: yupResolver(schema),
+  });
+	const [ see, setSee ] = useState<Boolean>(false);
+  const onSubmit = (data: any) => {
+    // Handle form submission
+    console.log(data);
+  };
+	console.log(errors);
   return (
-    <form>
-			{/* Email */}
+    <form onSubmit={handleSubmit(onSubmit)}>
 			<div className="mb-4">
-				<label htmlFor="exampleInputEmail1" className="form-label">
-					Email address *
+				<label htmlFor="exampleInputEmail1.1" className="form-label">
+					First Name *
+				</label>
+				<div className="input-group input-group-lg">
+					<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
+						<i className="bi bi-person-fill"></i>
+					</span>
+					<input
+						type="email"
+						className="form-control border-0 bg-light rounded-end ps-1"
+						placeholder="First Name"
+						id="exampleInputEmail1.1"
+						{...register('firstName')}
+						autoComplete="given-name" 
+					/>
+				</div>
+				{errors.firstName && <p className="text-danger mt-2">{errors.firstName.message}</p>}
+			</div>
+			<div className="mb-4">
+				<label htmlFor="exampleInputEmail1.2" className="form-label">
+					Last Name *
+				</label>
+				<div className="input-group input-group-lg">
+					<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
+						<i className="bi bi-person-fill"></i>
+					</span>
+					<input
+						type="email"
+						className="form-control border-0 bg-light rounded-end ps-1"
+						placeholder="Last Name"
+						id="exampleInputEmail1.2"
+						{...register('lastName')}
+						autoComplete="family-name" 
+					/>
+				</div>
+				{errors.lastName && <p className="text-danger mt-2">{errors.lastName.message}</p>}
+			</div>
+			<div className="mb-4">
+				<label htmlFor="exampleInputEmail1.9" className="form-label">
+					Phone Number *
+				</label>
+				<div className="input-group input-group-lg">
+					<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
+						<i className="bi bi-telephone-fill"></i>
+					</span>
+					<input
+						type="number"
+						className="form-control border-0 bg-light rounded-end ps-1"
+						placeholder="Phone Number - 07XXXXXXXX"
+						pattern='^[0-9]{8}$'
+						id="exampleInputEmail1.9"
+						{...register('phoneNumber')}
+						autoComplete="tel" 
+					/>
+				</div>
+				{errors.phoneNumber && <p className="text-danger mt-2">{errors.phoneNumber.message}</p>}
+			</div>
+			<div className="mb-4">
+				<label htmlFor="exampleInputEmail1.5" className="form-label">
+					Email Address *
 				</label>
 				<div className="input-group input-group-lg">
 					<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
@@ -19,9 +86,12 @@ const SignUp = (): React.ReactNode => {
 						type="email"
 						className="form-control border-0 bg-light rounded-end ps-1"
 						placeholder="E-mail"
-						id="exampleInputEmail1"
+						id="exampleInputEmail1.5"
+						{...register('email')}
+						autoComplete="email" 
 					/>
 				</div>
+				{errors.email && <p className="text-danger mt-2">{errors.email.message}</p>}
 			</div>
 			{/* Password */}
 			<div className="mb-4">
@@ -33,16 +103,21 @@ const SignUp = (): React.ReactNode => {
 						<i className="fas fa-lock" />
 					</span>
 					<input
-						type="password"
+						type={ see ? 'text' : 'password' }
 						className="form-control border-0 bg-light rounded-end ps-1"
 						placeholder="*********"
 						id="inputPassword5"
+						{...register('password')} 
 					/>
+					<span style={{cursor:'pointer'}} onClick={() => setSee(state => !state)} className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
+						{ see ? <i className="bi bi-eye-slash-fill"></i> : <i className="bi bi-eye-fill"></i> }
+					</span>
 				</div>
+				{errors.password && <p className="text-danger mt-2">{errors.password.message}</p>}
 			</div>
 			{/* Confirm Password */}
 			<div className="mb-4">
-				<label htmlFor="inputPassword6" className="form-label">
+				<label htmlFor="inputPassword7" className="form-label">
 					Confirm Password *
 				</label>
 				<div className="input-group input-group-lg">
@@ -53,9 +128,11 @@ const SignUp = (): React.ReactNode => {
 						type="password"
 						className="form-control border-0 bg-light rounded-end ps-1"
 						placeholder="*********"
-						id="inputPassword6"
+						id="inputPassword7"
+						{...register('confirmPassword')} 
 					/>
 				</div>
+				{errors.confirmPassword && <p className="text-danger mt-2">{errors.confirmPassword.message}</p>}
 			</div>
 			{/* Check box */}
 			<div className="mb-4">
@@ -74,7 +151,7 @@ const SignUp = (): React.ReactNode => {
 			{/* Button */}
 			<div className="align-items-center mt-0">
 				<div className="d-grid">
-					<button className="btn btn-primary mb-0" type="button">
+					<button onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="submit">
 						Sign Up
 					</button>
 				</div>
