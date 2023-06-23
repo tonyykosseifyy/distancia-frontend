@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import Script from 'next/script';
 
 
@@ -893,15 +894,15 @@ const Navbar = () : React.ReactNode => {
 										>
 											<li>
 												{" "}
-												<a className="dropdown-item" href="sign-in.html">
+												<Link className="dropdown-item" href='/auth/sign-in'>
 													Sign In
-												</a>
+												</Link>
 											</li>
 											<li>
 												{" "}
-												<a className="dropdown-item" href="sign-up.html">
+												<Link className="dropdown-item" href='/auth/sign-up'>
 													Sign Up
-												</a>
+												</Link>
 											</li>
 											<li>
 												{" "}

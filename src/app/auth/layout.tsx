@@ -16,13 +16,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-        
-        <Script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
-        <Script src="/assets/js/functions.js" />
-       
-      </body>
-    </html>
+  <>
+    {children}
+    
+    <Script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js" />
+    <Script src="/assets/js/functions.js" />
+  </>
 )};
