@@ -1,4 +1,5 @@
 import React from 'react';
+import ForgotPasswordForm from '@/components/Auth/ForgotPassword';
 
 const ForgotPassword = () : React.ReactNode => {
   return (
@@ -68,33 +69,7 @@ const ForgotPassword = () : React.ReactNode => {
 										To receive a new password, enter your email address below.
 									</h5>
 									{/* Form START */}
-									<form>
-										{/* Email */}
-										<div className="mb-4">
-											<label htmlFor="exampleInputEmail1" className="form-label">
-												Email address *
-											</label>
-											<div className="input-group input-group-lg">
-												<span className="input-group-text bg-light rounded-start border-0 text-secondary px-3">
-													<i className="bi bi-envelope-fill" />
-												</span>
-												<input
-													type="email"
-													className="form-control border-0 bg-light rounded-end ps-1"
-													placeholder="E-mail"
-													id="exampleInputEmail1"
-												/>
-											</div>
-										</div>
-										{/* Button */}
-										<div className="align-items-center">
-											<div className="d-grid">
-												<button className="btn btn-primary mb-0" type="button">
-													Reset password
-												</button>
-											</div>
-										</div>
-									</form>
+									<ForgotPasswordForm />
 									{/* Form END */}
 								</div>
 							</div>{" "}
