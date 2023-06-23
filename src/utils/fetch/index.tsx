@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
-const BASE_URL = process.env.BASE_URL ;
 
+const BASE_URL = process.env.BASE_URL ;
 
 const customFetch = async (url: string, options: any) => {
   return fetch(`${BASE_URL}${url}`, {
