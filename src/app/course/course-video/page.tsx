@@ -12,14 +12,38 @@ const CourseVideo = () : React.ReactNode => {
             <div className="overflow-hidden fullscreen-video w-100">
               {/* Full screen video START */}
               <div className="video-player rounded-3">
-              <video controls crossOrigin="anonymous" playsInline poster="assets/images/videos/poster.jpg">
-                <source src="assets/images/videos/1080p.mp4" type="video/mp4" />
-                <source src="assets/images/videos/720p.mp4" type="video/mp4"  />
-                <source src="assets/images/videos/360p.mp4" type="video/mp4" />
+              {/* <video
+              controls
+              crossOrigin="anonymous"
+              playsInline
+              poster="/images/videos/poster.jpg"
+            >
+              <source src="/images/videos/1080p.mp4" type="video/mp4" />
+              <source src="/images/videos/720p.mp4" type="video/mp4" />
+              <source src="/images/videos/360p.mp4" type="video/mp4" />
+              
+              <track
+                kind="captions"
+                label="English"
+                srcLang="en"
+                src="/images/videos/en.vtt"
+                default
+              />
+              <track
+                kind="captions"
+                label="French"
+                srcLang="fr"
+                src="/images/videos/fr.vtt"
+              />
+            </video> */}
+              <video controls crossOrigin="anonymous" playsInline poster="/images/videos/poster.jpg">
+                <source src="/images/videos/1080p.mp4" type="video/mp4" />
+                <source src="/images/videos/720p.mp4" type="video/mp4"  />
+                <source src="/images/videos/360p.mp4" type="video/mp4" />
               
                 {/* Caption files */}
-                <track kind="captions" label="English" srcLang="en" src="assets/images/videos/en.vtt" default />
-                <track kind="captions" label="French" srcLang="fr" src="assets/images/videos/fr.vtt" />
+                <track kind="captions" label="English" srcLang="en" src="/images/videos/en.vtt" default />
+                <track kind="captions" label="French" srcLang="fr" src="/images/videos/fr.vtt" />
               </video>
               </div>
               {/* Full screen video END */}
