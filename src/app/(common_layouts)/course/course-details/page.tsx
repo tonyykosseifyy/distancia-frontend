@@ -1,6 +1,7 @@
 import React from 'react';
 import Script from 'next/script';
-import Head from 'next/head';
+import Link from 'next/link';
+
 
 const CourseDetail = () : React.ReactNode => {
   return (
