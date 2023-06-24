@@ -59,18 +59,18 @@ const StudentSidebar = () : React.ReactNode => {
             <i className="bi bi-cart-check fa-fw me-2" />
             Wishlist
           </Link>
-          <a className="list-group-item" href="instructor-edit-profile.html">
+          <Link className={`list-group-item ${pathname === '/student/edit-profile' && 'active'}`} href='/student/edit-profile'>
             <i className="bi bi-pencil-square fa-fw me-2" />
             Edit Profile
-          </a>
-          <a className="list-group-item" href="instructor-setting.html">
+          </Link>
+          <Link className={`list-group-item ${pathname === '/student/settings' && 'active'}`} href='/student/settings'>
             <i className="bi bi-gear fa-fw me-2" />
             Settings
-          </a>
-          <a className="list-group-item" href="instructor-delete-account.html">
+          </Link>
+          <Link className={`list-group-item ${pathname === '/student/delete-profile' && 'active'}`} href='/student/delete-profile'>
             <i className="bi bi-trash fa-fw me-2" />
             Delete Profile
-          </a>
+          </Link>
           <a
             className="list-group-item text-danger bg-danger-soft-hover"
             href="#"
