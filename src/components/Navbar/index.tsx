@@ -1084,7 +1084,7 @@ const Navbar = () : React.ReactNode => {
 									</li>
 									{/* Dropdown submenu */}
 									<li className="dropdown-submenu dropend">
-										<Link className="dropdown-item dropdown-toggle" href='/student'>
+										<Link className="dropdown-item dropdown-toggle" href='/student/dashboard'>
 											<i className="fas fa-user-graduate fa-fw me-1" />
 											Student
 										</Link>
@@ -1168,30 +1168,30 @@ const Navbar = () : React.ReactNode => {
 									</li>
 									<li>
 										{" "}
-										<a
+										<Link
 											className="dropdown-item"
-											href="instructor-edit-profile.html"
+											href='/student/edit-profile'
 										>
 											<i className="fas fa-fw fa-edit me-1" />
 											Edit Profile
-										</a>{" "}
+										</Link>{" "}
 									</li>
 									<li>
 										{" "}
-										<a className="dropdown-item" href="instructor-setting.html">
+										<Link className="dropdown-item" href='/student/settings'>
 											<i className="fas fa-fw fa-cog me-1" />
 											Settings
-										</a>{" "}
+										</Link>{" "}
 									</li>
 									<li>
 										{" "}
-										<a
+										<Link
 											className="dropdown-item"
-											href="instructor-delete-account.html"
+											href='/student/delete-profile'
 										>
 											<i className="fas fa-fw fa-trash-alt me-1" />
 											Delete Profile
-										</a>{" "}
+										</Link>{" "}
 									</li>
 									<li>
 										{" "}
