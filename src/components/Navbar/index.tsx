@@ -10,7 +10,7 @@ const Navbar = () : React.ReactNode => {
 			<nav className="navbar navbar-expand-xl">
 				<div className="container-fluid px-3 px-xl-5">
 					{/* Logo START */}
-					<a className="navbar-brand" href="index.html">
+					<Link className="navbar-brand" href='/'>
 						<img
 							className="light-mode-item navbar-brand-item"
 							src="/images/logo.svg"
@@ -21,7 +21,7 @@ const Navbar = () : React.ReactNode => {
 							src="/images/logo-light.svg"
 							alt="logo"
 						/>
-					</a>
+					</Link>
 					{/* Logo END */}
 					{/* Responsive navbar toggler */}
 					<button
@@ -698,15 +698,15 @@ const Navbar = () : React.ReactNode => {
 										>
 											<li>
 												{" "}
-												<a className="dropdown-item" href="about.html">
+												<Link className="dropdown-item" href='/about'>
 													About Us
-												</a>
+												</Link>
 											</li>
 											<li>
 												{" "}
-												<a className="dropdown-item" href="contact-us.html">
+												<Link className="dropdown-item" href='/contact-us'>
 													Contact Us
-												</a>
+												</Link>
 											</li>
 											<li>
 												{" "}
@@ -906,9 +906,9 @@ const Navbar = () : React.ReactNode => {
 											</li>
 											<li>
 												{" "}
-												<a className="dropdown-item" href="forgot-password.html">
+												<Link className="dropdown-item" href='/auth/forgot-password'>
 													Forgot Password
-												</a>
+												</Link>
 											</li>
 										</ul>
 									</li>
@@ -1084,50 +1084,50 @@ const Navbar = () : React.ReactNode => {
 									</li>
 									{/* Dropdown submenu */}
 									<li className="dropdown-submenu dropend">
-										<a className="dropdown-item dropdown-toggle" href="#">
+										<Link className="dropdown-item dropdown-toggle" href='/student'>
 											<i className="fas fa-user-graduate fa-fw me-1" />
 											Student
-										</a>
+										</Link>
 										<ul
 											className="dropdown-menu dropdown-menu-start"
 											data-bs-popper="none"
 										>
 											<li>
 												{" "}
-												<a className="dropdown-item" href="student-dashboard.html">
+												<Link className="dropdown-item" href='/student/dashboard'>
 													<i className="bi bi-grid-fill fa-fw me-1" />
 													Dashboard
-												</a>{" "}
+												</Link>{" "}
 											</li>
 											<li>
 												{" "}
-												<a
+												<Link
 													className="dropdown-item"
-													href="student-subscription.html"
+													href='/student/my-subscriptions'
 												>
 													<i className="bi bi-card-checklist fa-fw me-1" />
 													My Subscriptions
-												</a>{" "}
+												</Link>{" "}
 											</li>
 											<li>
 												{" "}
-												<a
+												<Link
 													className="dropdown-item"
-													href="student-course-list.html"
+													href='/student/my-courses'
 												>
 													<i className="bi bi-basket-fill fa-fw me-1" />
 													Courses
-												</a>{" "}
+												</Link>{" "}
 											</li>
 											<li>
 												{" "}
-												<a
+												<Link
 													className="dropdown-item"
-													href="student-course-resume.html"
+													href='/student/course-resume'
 												>
 													<i className="far fa-fw fa-file-alt me-1" />
 													Course Resume
-												</a>{" "}
+												</Link>{" "}
 											</li>
 											<li>
 												{" "}

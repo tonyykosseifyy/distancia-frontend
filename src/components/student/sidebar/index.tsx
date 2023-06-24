@@ -1,8 +1,12 @@
+'use client'
 import React from 'react'
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const StudentSidebar = () : React.ReactNode => {
+  const pathname = usePathname();
   return (
-    <div className="col-xl-3">
+  <div className="col-xl-3">
   {/* Responsive offcanvas body START */}
   <div
     className="offcanvas-xl offcanvas-end"
@@ -27,34 +31,34 @@ const StudentSidebar = () : React.ReactNode => {
       <div className="bg-dark border rounded-3 p-3 w-100">
         {/* Dashboard menu */}
         <div className="list-group list-group-dark list-group-borderless collapse-list">
-          <a className="list-group-item" href="student-dashboard.html">
+          <Link className={`list-group-item ${pathname === '/student/dashboard' && 'active'}`} href='/student/dashboard'>
             <i className="bi bi-ui-checks-grid fa-fw me-2" />
             Dashboard
-          </a>
-          <a className="list-group-item" href="student-subscription.html">
+          </Link>
+          <Link className={`list-group-item ${pathname === '/student/my-subscriptions' && 'active'}`} href='/student/my-subscriptions'>
             <i className="bi bi-card-checklist fa-fw me-2" />
             My Subscriptions
-          </a>
-          <a className="list-group-item" href="student-course-list.html">
+          </Link>
+          <Link className={`list-group-item ${pathname === '/student/my-courses' && 'active'}`} href='/student/my-courses'>
             <i className="bi bi-basket fa-fw me-2" />
             My Courses
-          </a>
-          <a className="list-group-item" href="student-course-resume.html">
+          </Link>
+          <a className={`list-group-item ${pathname === '/student/course-resume' && 'active'}`} href='/student/course-resume'>
             <i className="far fa-fw fa-file-alt me-2" />
             Course Resume
           </a>
-          <a className="list-group-item" href="student-quiz.html">
+          <Link className={`list-group-item ${pathname === '/student/whishlist' && 'active'}`} href="student-quiz.html">
             <i className="bi bi-question-diamond fa-fw me-2" />
             Quiz
-          </a>
+          </Link>
           <a className="list-group-item" href="student-payment-info.html">
             <i className="bi bi-credit-card-2-front fa-fw me-2" />
             Payment Info
           </a>
-          <a className="list-group-item active" href="student-bookmark.html">
+          <Link className={`list-group-item ${pathname === '/student/bookmarks' && 'active'}`} href='/student/bookmarks'>
             <i className="bi bi-cart-check fa-fw me-2" />
             Wishlist
-          </a>
+          </Link>
           <a className="list-group-item" href="instructor-edit-profile.html">
             <i className="bi bi-pencil-square fa-fw me-2" />
             Edit Profile

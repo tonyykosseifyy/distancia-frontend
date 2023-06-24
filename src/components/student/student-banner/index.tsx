@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const StudentBanner = () : React.ReactNode => {
   return (
-    <section className="pt-0">
+  <section className="pt-0">
   <div className="container-fluid px-0">
     <div
       className="card bg-blue h-100px h-md-200px rounded-0"
