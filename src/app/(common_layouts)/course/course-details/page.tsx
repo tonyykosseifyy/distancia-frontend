@@ -2446,9 +2446,9 @@ const CourseDetail = () : React.ReactNode => {
                       </div>
                       {/* Buttons */}
                       <div className="mt-3 d-sm-flex justify-content-sm-between">
-                        <a href="#" className="btn btn-outline-primary mb-0">
+                        <Link href='/course/course-video' className="btn btn-outline-primary mb-0">
                           Free trial
-                        </a>
+                        </Link>
                         <a href="#" className="btn btn-success mb-0">
                           Buy course
                         </a>
