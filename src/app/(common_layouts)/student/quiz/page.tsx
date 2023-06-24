@@ -460,8 +460,6 @@ const StudentQuiz = () : React.ReactNode => {
     </div>
     <Script src='/assets/vendor/stepper/js/bs-stepper.min.js' />
     </>
-   
-
   );
 }
 
