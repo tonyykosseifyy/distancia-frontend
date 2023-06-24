@@ -1,4 +1,4 @@
-import 'public/assets/vendor/choices/css/choices.min.css' ;
+import 'public/assets/vendor/choices/css/choices.css' ;
 import 'public/assets/vendor/aos/aos.css';
 import StudentBanner from "@/components/student/student-banner";
 import StudentSidebar from "@/components/student/sidebar";

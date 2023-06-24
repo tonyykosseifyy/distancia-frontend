@@ -43,10 +43,10 @@ const StudentSidebar = () : React.ReactNode => {
             <i className="bi bi-basket fa-fw me-2" />
             My Courses
           </Link>
-          <a className={`list-group-item ${pathname === '/student/course-resume' && 'active'}`} href='/student/course-resume'>
+          <Link className={`list-group-item ${pathname === '/student/course-resume' && 'active'}`} href='/student/course-resume'>
             <i className="far fa-fw fa-file-alt me-2" />
             Course Resume
-          </a>
+          </Link>
           <Link className={`list-group-item ${pathname === '/student/whishlist' && 'active'}`} href="student-quiz.html">
             <i className="bi bi-question-diamond fa-fw me-2" />
             Quiz

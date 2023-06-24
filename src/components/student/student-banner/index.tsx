@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const StudentBanner = () : React.ReactNode => {
@@ -55,12 +56,12 @@ const StudentBanner = () : React.ReactNode => {
               </div>
               {/* Button */}
               <div className="mt-2 mt-sm-0">
-                <a
-                  href="student-course-list.html"
+                <Link
+                  href='/student/my-courses'
                   className="btn btn-outline-primary mb-0"
                 >
                   View my courses
-                </a>
+                </Link>
               </div>
             </div>
           </div>
