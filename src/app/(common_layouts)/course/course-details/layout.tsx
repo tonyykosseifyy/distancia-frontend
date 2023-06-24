@@ -2,11 +2,10 @@ import CourseModal from "@/components/course/modal";
 import Script from "next/script";
 import 'public/assets/vendor/choices/css/choices.css' ;
 import 'public/assets/vendor/aos/aos.css';
-import 'public/assets/vendor/plyr/plyr.css';
 
 export const metadata = {
   title: 'Distancia',
-  description: 'Course Details',
+  description: 'Course Details'
 };
 
 export default function RootLayout({
@@ -21,6 +20,5 @@ export default function RootLayout({
       <CourseModal />
       <Script src="/assets/vendor/choices/js/choices.min.js" /> 
       <Script src="/assets/vendor/aos/aos.js" /> 
-      <Script src="/assets/vendor/plyr/plyr.js" /> 
     </>        
 )};
