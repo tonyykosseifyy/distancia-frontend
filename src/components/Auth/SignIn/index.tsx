@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import { schema, SignUpFormData } from './utils';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
+import Link from 'next/link';
+
 
 const SignIn = (): React.ReactNode => {
   const [ rememberMe, setRememberMe ] = useState(false);
@@ -72,9 +74,9 @@ const SignIn = (): React.ReactNode => {
           </label>
         </div>
         <div className="text-primary-hover">
-          <a href="forgot-password.html" className="text-secondary">
+          <Link href='/auth/forgot-password' className="text-secondary">
             <u>Forgot password?</u>
-          </a>
+          </Link>
         </div>
       </div>
       {/* Button */}

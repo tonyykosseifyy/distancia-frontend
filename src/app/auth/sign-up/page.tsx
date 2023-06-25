@@ -1,6 +1,6 @@
 import React from 'react';
 import SignUpForm from '@/components/Auth/SignUp';
-
+import Link from 'next/link';
 
 const SignUp = () : React.ReactNode => {
 	return (
@@ -104,7 +104,7 @@ const SignUp = () : React.ReactNode => {
 									<div className="mt-4 text-center">
 										<span>
 											Already have an account?
-											<a href="sign-in.html"> Sign in here</a>
+											<Link href='/auth/sign-in'> Sign in here</Link>
 										</span>
 									</div>
 								</div>
