@@ -7,10 +7,6 @@ import Head from 'next/head';
 
 const About = () : React.ReactNode => {
   return (
-    <div>
-			<Head>
-				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" />
-			</Head>
 			<main>
   {/* =======================
 Page Banner START */}
@@ -866,9 +862,6 @@ Award and Team START */}
   {/* =======================
 Award and Team END */}
 			</main>
-
-			<Script src="/assets/vendor/aos/aos.js" />
-    </div>
   );
 };
 

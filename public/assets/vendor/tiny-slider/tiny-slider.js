@@ -1,5 +1,6 @@
 var tns = (function (){
 var win = window;
+console.log('rendered');
 
 var raf = win.requestAnimationFrame
   || win.webkitRequestAnimationFrame
