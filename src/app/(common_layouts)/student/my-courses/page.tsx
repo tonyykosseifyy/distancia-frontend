@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
 
 
 const StudentCourses = () : React.ReactNode => {
@@ -183,13 +184,13 @@ const StudentCourses = () : React.ReactNode => {
               <td>40</td>
               {/* Table data */}
               <td>
-                <a
-                  href="#"
+                <Link
+                  href="/course/course-details"
                   className="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"
                 >
                   <i className="bi bi-play-circle me-1" />
                   Continue
-                </a>
+                </Link>
               </td>
             </tr>
             {/* Table item */}
@@ -292,13 +293,13 @@ const StudentCourses = () : React.ReactNode => {
               <td>12</td>
               {/* Table data */}
               <td>
-                <a
-                  href="#"
+                <Link
+                  href="/course/course-details"
                   className="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"
                 >
                   <i className="bi bi-play-circle me-1" />
                   Continue
-                </a>
+                </Link>
               </td>
             </tr>
             {/* Table item */}
@@ -346,13 +347,13 @@ const StudentCourses = () : React.ReactNode => {
               <td>18</td>
               {/* Table data */}
               <td>
-                <a
-                  href="#"
+                <Link
+                  href="/course/course-details"
                   className="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"
                 >
                   <i className="bi bi-play-circle me-1" />
                   Continue
-                </a>
+                </Link>
               </td>
             </tr>
             {/* Table item */}
@@ -400,13 +401,13 @@ const StudentCourses = () : React.ReactNode => {
               <td>14</td>
               {/* Table data */}
               <td>
-                <a
-                  href="#"
+              <Link
+                  href="/course/course-details"
                   className="btn btn-sm btn-primary-soft me-1 mb-1 mb-md-0"
                 >
                   <i className="bi bi-play-circle me-1" />
                   Continue
-                </a>
+                </Link>
               </td>
             </tr>
           </tbody>
