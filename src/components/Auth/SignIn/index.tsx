@@ -1,25 +1,27 @@
 'use client';
 import React, { useState } from 'react'
-import { schema, SignUpFormData } from './utils';
+import { schema, SignInFormData } from './utils';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
-import fetch from '@/utils/fetch';
+import axios from '@/utils/axios';
 
 
 const SignIn = (): React.ReactNode => {
   const [ rememberMe, setRememberMe ] = useState(false);
   const [ see, setSee ] = useState<Boolean>(false);
-  const { register, handleSubmit, formState: { errors } } = useForm<SignUpFormData>({
+  const [ error, setError ] = useState<String>("");
+  const { register, handleSubmit, formState: { errors } } = useForm<SignInFormData>({
     resolver: yupResolver(schema),
   });
   const onSubmit = async (data: any)  => {
-    'use server'
-    console.log(data);
-    const response = await fetch('/auth/sign-in', {
-      method: 'POST',
-      body: data ,
-    });
+    try {
+      console.log(data);
+      const response = await axios.post('/auth/local/signin', data);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
   };
 	console.log(errors);
   return (
