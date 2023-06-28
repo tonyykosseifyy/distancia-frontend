@@ -13,7 +13,9 @@ const customFetch = async (url: string, options: any) => {
     },
   })
   .then((res) => res.json())
+  .then((res) => res) 
   .catch((err) => {
+    console.log('error fetch', err);
     // if cookies refresh token send a request to /refresh to get new token]
     if ( err.status === 401 ) {
       cookies().set({

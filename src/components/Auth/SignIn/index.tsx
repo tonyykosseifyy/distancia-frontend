@@ -4,6 +4,7 @@ import { schema, SignUpFormData } from './utils';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
+import fetch from '@/utils/fetch';
 
 
 const SignIn = (): React.ReactNode => {
@@ -12,9 +13,13 @@ const SignIn = (): React.ReactNode => {
   const { register, handleSubmit, formState: { errors } } = useForm<SignUpFormData>({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data: any) => {
-    // Handle form submission
+  const onSubmit = async (data: any)  => {
+    'use server'
     console.log(data);
+    const response = await fetch('/auth/sign-in', {
+      method: 'POST',
+      body: data ,
+    });
   };
 	console.log(errors);
   return (
