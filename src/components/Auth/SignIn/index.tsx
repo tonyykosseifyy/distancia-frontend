@@ -4,7 +4,7 @@ import { schema, SignInFormData } from './utils';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
-import axios from '../../../utils/axios';
+import axios from '@/utils/axios';
 
 
 const SignIn = (): React.ReactNode => {
@@ -20,7 +20,7 @@ const SignIn = (): React.ReactNode => {
       const response = await axios.post('/auth/local/signin', data);
       console.log(response);
     } catch (err) {
-      console.log(err);
+      console.log('error by me', err);
     }
   };
 	console.log(errors);
