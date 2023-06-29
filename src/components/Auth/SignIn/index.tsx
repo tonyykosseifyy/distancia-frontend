@@ -4,7 +4,7 @@ import { schema, SignInFormData } from './utils';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
-import axios from '@/utils/axios';
+import axios from '../../../utils/axios';
 
 
 const SignIn = (): React.ReactNode => {
