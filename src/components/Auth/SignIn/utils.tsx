@@ -12,3 +12,22 @@ export const schema = Yup.object().shape({
     .min(8, 'Password must be at least 8 characters')
 });
 
+
+export type axiosError = {
+  statusCode: number;
+  message: String ;
+  error: String ;
+}
+
+export class axiosErrorClass {
+  statusCode: number;
+  message: String ;
+  error: String ;
+
+  constructor() {
+    this.statusCode = 0;
+    this.message = "";
+    this.error = "";
+  }
+
+}

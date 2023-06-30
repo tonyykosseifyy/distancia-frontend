@@ -1,29 +1,38 @@
 'use client';
 import React, { useState } from 'react'
-import { schema, SignInFormData } from './utils';
+import { schema, SignInFormData, axiosError, axiosErrorClass } from './utils';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import Link from 'next/link';
 import axios from '@/utils/axios';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 
 const SignIn = (): React.ReactNode => {
+  const router = useRouter();
+  const query = useSearchParams();
   const [ rememberMe, setRememberMe ] = useState(false);
   const [ see, setSee ] = useState<Boolean>(false);
-  const [ error, setError ] = useState<String>("");
+  const [ loading, setLoading ] = useState<Boolean>(false);
+  const [ error, setError ] = useState<axiosError>({ statusCode: 0, message: "", error: "" });
   const { register, handleSubmit, formState: { errors } } = useForm<SignInFormData>({
     resolver: yupResolver(schema),
   });
   const onSubmit = async (data: any)  => {
+    setLoading(true)
     try {
-      console.log(data);
       const response = await axios.post('/auth/local/signin', data);
-      console.log(response);
-    } catch (err) {
-      console.log('error by me', err);
+      const user_data = response.data;
+      setError(new axiosErrorClass()) ;
+      console.log(query.get('previous'));
+      router.push(query.get('previous') ?? '/student/dashboard') ;
+    } catch (err: any) {
+      setError(err.response.data);
+    }
+    finally {
+      setLoading(false);
     }
   };
-	console.log(errors);
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       {/* Email */}
@@ -87,10 +96,16 @@ const SignIn = (): React.ReactNode => {
         </div>
       </div>
       {/* Button */}
+      {error.statusCode === 403 && <p className="text-danger mt-2">{error.message}</p>}
+
       <div className="align-items-center mt-0">
         <div className="d-grid">
           <button onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="button">
-            Login
+            {loading ? <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> :
+            <>
+              Login
+            </>
+            }
           </button>
         </div>
       </div>
