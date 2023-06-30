@@ -99,7 +99,7 @@ const SignIn = (): React.ReactNode => {
 
       <div className="align-items-center mt-0">
         <div className="d-grid">
-          <button onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="submit">
+          <button onClick={handleSubmit(onSubmit)} className={`btn btn-primary mb-0 ${Object.values(errors).length > 0 && 'disabled'}`} type="submit">
             {loading ? <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> :
             <>
               Login
