@@ -1,7 +1,15 @@
 import React from 'react'
+import fetch from '@/utils/fetch';
 
+async function getData() {
+  const res = await fetch('user/me')
+  console.log("response from get Data: ", res) ;
+  return res ;
+}
 
-const StudentDashboard = () : React.ReactNode => {
+const StudentDashboard = async ()  => {
+  const data = await getData() ;
+  console.log(data);
   return (
     <div className="col-xl-9">
   {/* Counter boxes START */}
