@@ -24,8 +24,7 @@ const SignIn = (): React.ReactNode => {
       const response = await axios.post('/auth/local/signin', data);
       const user_data = response.data;
       setError(new axiosErrorClass()) ;
-      console.log(query.get('previous'));
-      router.push(query.get('previous') ?? '/student/dashboard') ;
+      // router.push(query.get('previous') ?? '/student/dashboard') ;
     } catch (err: any) {
       setError(err.response.data);
     }
@@ -100,7 +99,7 @@ const SignIn = (): React.ReactNode => {
 
       <div className="align-items-center mt-0">
         <div className="d-grid">
-          <button onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="button">
+          <button onClick={handleSubmit(onSubmit)} className="btn btn-primary mb-0" type="submit">
             {loading ? <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span> :
             <>
               Login
