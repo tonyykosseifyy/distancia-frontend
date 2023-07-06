@@ -7,6 +7,35 @@ import Link from 'next/link';
 import axios from '@/utils/axios';
 import { useRouter, useSearchParams } from 'next/navigation';
 
+const saveTokens = async (response: any) => {
+  console.log(response);
+  console.log(response.headers.get('Set-Cookie'));
+  // try {
+  //   const response = await fetch('/api/auth/login', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       access_token: 'your_access_token',
+  //       refresh_token: 'your_refresh_token',
+  //     }),
+  //   });
+
+  //   // if (response.ok) {
+  //   //   const cookies = response.headers.get('Set-Cookie');
+  //   //   // Parse and save the cookies as needed
+  //   //   // Example: document.cookie = cookies;
+
+  //   //   setMessage('Login successful');
+  //   // } else {
+  //   //   setMessage('Login failed');
+  //   // }
+  // } catch (error) {
+  //   console.error('Login error:', error);
+  // }
+};
+
 
 const SignIn = (): React.ReactNode => {
   const router = useRouter();
@@ -24,7 +53,9 @@ const SignIn = (): React.ReactNode => {
       const response = await axios.post('/auth/local/signin', data);
       const user_data = response.data;
       setError(new axiosErrorClass()) ;
-      // router.push(query.get('previous') ?? '/student/dashboard') ;
+      console.log(user_data);
+      saveTokens(response);
+      router.push(query ? query.get('previous') ?? '/student/dashboard': '/student/dashboard') ;
     } catch (err: any) {
       setError(err.response.data);
     }

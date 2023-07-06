@@ -2,7 +2,7 @@ import React from 'react'
 import fetch from '@/utils/fetch';
 
 async function getData() {
-  const res = await fetch('user/me')
+  const res = await fetch('user/me', { cache: 'no-store' })
   console.log("response from get Data: ", res) ;
   return res ;
 }
